@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('images/giphy.webp');
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border: 2px solid black;
+}
+
+.profile-img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+p {
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    position: relative;
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.link:hover::before {
+    background-color: rgba(28, 28, 28, 0.6);
+}
+
+.link:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.link-resume {
+    background-image: url('images/resume.png'); /* Replace with your image path */
+}
+
+.link-website {
+    background-image: url('images/website.png'); /* Replace with your image path */
+}
+
+.link-github {
+    background-image: url('images/github.png'); /* Replace with your image path */
+}
+
+.link-linkedin {
+    background-image: url('images/linkedin.png'); /* Replace with your image path */
+}
+
+.link-leetcode {
+    background-image: url('images/leetcode.png'); /* Replace with your image path */
+}
+
+.link-steam {
+    background-image: url('images/steam.png'); /* Replace with your image path */
+}
+
+.link span {
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 16px;
+}
